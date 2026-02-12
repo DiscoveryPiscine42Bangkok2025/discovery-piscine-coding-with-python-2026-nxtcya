@@ -5,7 +5,7 @@ def check_char(board):
         for c in range(len(board[r])):
             char = board[r][c]
             if char not in allowed_chars:
-                print(f"Error: Invalid character {char}")
+                print(f"Error! Invalid character {char}")
                 return False
     return True
 
@@ -15,7 +15,7 @@ def condition_game(board_str):
     board = [line.strip() for line in board_str.strip().splitlines()]
 
     if not board:
-        print("Error, Board is empty ....")
+        print("Error! Board is empty ....")
         print("Please enter a value")
         return
         
@@ -26,7 +26,7 @@ def condition_game(board_str):
     size = len(board)
     for row in board:
         if len(row) != size:
-            print("Error, Not a square board")
+            print("Error! Not a square board")
             return
 
     rows = len(board)
@@ -42,7 +42,7 @@ def condition_game(board_str):
         print("Not have king !!")
         return
     if len(position_K) > 1:
-        print("Error, Multiple kings found")
+        print("Error! Multiple kings found")
         return
 
     kx, ky = position_K[0]
