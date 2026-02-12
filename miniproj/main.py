@@ -4,16 +4,14 @@ from checkmate import  condition_game
 
 def main(): 
 
-    board = [
-        "R...",
-        ".K..",
-        "..P.",
-        "...P"
-        ]
+    board_str = """\
+        R...
+        .K..
+        ..P.
+        ....\
+        """
 
-
-
-    condition_game(board)
+    condition_game(board_str)
 
 if __name__ == "__main__":
     main()

@@ -10,7 +10,9 @@ def check_char(board):
     return True
 
 
-def condition_game(board):
+def condition_game(board_str):
+
+    board = board_str.splitlines()
 
     if not board:
         print("Error: Board is empty ....")
