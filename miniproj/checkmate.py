@@ -72,11 +72,11 @@ def condition_game(board):
             print("Success")
             return
         
-    pawn = [(-1,-1),(-1,1)]
+    pawn = [(-1,1),(1,1)]
     for dx, dy in pawn:
         sx, sy = kx + dx, ky + dy
-        if 0 <= sx < cols and 0 <= sy < rows:
-            if board[sx][sy] == "K":
+        if 0 <= sx < rows and 0 <= sy < cols:
+            if board[sx][sy] == "P":
                 print("Success")
                 return
 
